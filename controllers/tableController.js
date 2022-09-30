@@ -1,4 +1,3 @@
-const conn = require("../db");
 let connectionRequest = require("../db");
 
 class tableController {
@@ -15,13 +14,6 @@ class tableController {
           res.json(result);
           connection.destroy();
         }
-      });
-
-      conn.end(function (err) {
-        if (err) {
-          return console.log("Ошибка: " + err.message);
-        }
-        console.log("Подключение закрыто");
       });
     } catch (e) {
       console.log(e);
